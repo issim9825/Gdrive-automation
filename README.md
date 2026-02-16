@@ -20,10 +20,10 @@ Rename .env.template to .env and fill in canvas api keys and urls.
 For convenience, create a symlink to the script in a $PATH folder to make it executable from wherever:  
 ```bash
 # Syntax: ln -s /absolute/path/to/script /usr/local/bin/shortcut-name
-sudo ln -s "$(pwd)/canvas_sync.sh" /usr/local/bin/sync-canvas
+sudo ln -s "$(pwd)/sync-canvas.sh" /usr/local/bin/sync-canvas
 
 # Without sudo access
-ln -s "$(pwd)/canvas_sync.sh" $HOME/bin/sync-canvas
+ln -s "$(pwd)/sync-canvas.sh" $HOME/bin/sync-canvas
 
 ```
 
