@@ -1,0 +1,16 @@
+● fcron.service - fcron periodical command scheduler
+     Loaded: loaded (/usr/lib/systemd/system/fcron.service; enabled; preset: disabled)
+     Active: active (running) since Mon 2026-02-09 13:38:44 CET; 49s ago
+ Invocation: 983d6995340a4cf49b4a3d7bab0f0be2
+   Main PID: 164999 (fcron)
+      Tasks: 0 (limit: 47922)
+     Memory: 4K (peak: 1.7M)
+        CPU: 50ms
+     CGroup: /system.slice/fcron.service
+             ‣ 164999 fcron
+
+Feb 09 13:38:44 archlinux systemd[1]: Started fcron periodical command scheduler.
+Feb 09 13:38:44 archlinux fcron[166568]: can't lock /run/fcron.pid, running daemon's pid may be 164999: Resource temporarily unavailable
+Feb 09 13:38:44 archlinux fcron[166568]: 2026-02-09 13:38:44 ERROR can't lock /run/fcron.pid, running daemon's pid may be 164999: Resource temporarily unavailable
+Feb 09 13:38:44 archlinux fcron[166568]: 2026-02-09 13:38:44 ERROR Aborted
+Feb 09 13:38:44 archlinux fcron[166568]: Aborted

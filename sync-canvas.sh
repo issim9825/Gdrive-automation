@@ -1,13 +1,19 @@
 #!/bin/bash
+# Script to sync syllabus files from Canvas to Google Drive using rclone
+# Set path for fcron
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 # --- 1. Load Environment ---
-if [ -f .env ]; then
+# Finn mappen der skriptet faktisk er lagret
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [ -f $DIR/.env ]; then
     set -a
-    # Absolute path for cron compatibility
-    source $HOME/Projects/NotebookLM-automation/.env
+    # Absolute path for fcron compatibility
+    source "$DIR/.env"
     set +a
 else
-    echo "Error: .env file not found."
+    echo "Error: .env file not found in $DIR."
     exit 1
 fi
 
