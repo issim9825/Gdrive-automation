@@ -5,7 +5,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 # --- 1. Load Environment ---
 # Finn mappen der skriptet faktisk er lagret
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DIR="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 
 if [ -f $DIR/.env ]; then
     set -a
@@ -16,6 +16,8 @@ else
     echo "Error: .env file not found in $DIR."
     exit 1
 fi
+# Make sure the local dir stays in same folder as script
+LOCAL_DIR=$DIR/$LOCAL_DIR
 
 echo "--- Starting Canvas Syllabus Sync: $(date) ---"
 
