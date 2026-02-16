@@ -2,18 +2,18 @@
 This automation scrapes a canvas page for files hosted externilly and syncs them with google drive.  
 
 ## Prerequisites
-1. Required Software
-    `curl`: For API communication and file downloads.
-    `jq`: For parsing JSON data from the Canvas API.
-    `rclone`: For syncing files to the cloud.
+1. Required Software  
+    `curl`: For API communication and file downloads.  
+    `jq`: For parsing JSON data from the Canvas API.  
+    `rclone`: For syncing files to the cloud.  
 
-2. Configuration & Access
-   **Canvas API Token**: Generate a manual integration token from your Canvas "Settings" page.
+2. Configuration & Access  
+   **Canvas API Token**: Generate a manual integration token from your Canvas "Settings" page.  
    
-   **Rclone Remote**: You must have a pre-configured remote in rclone (e.g., named gdrive).  
-   Run `rclone config` to set this up before using the script.
+   **Rclone Remote**: You must have a pre-configured remote in rclone (e.g., named gdrive).    
+   Run `rclone config` to set this up before using the script.  
 
-   **Course ID**: You need the numerical ID of the Canvas course (found in the course URL).
+   **Course ID**: You need the numerical ID of the Canvas course (found in the course URL).  
 
 ## Installation
 Rename .env.template to .env and fill in canvas api keys and urls. 
